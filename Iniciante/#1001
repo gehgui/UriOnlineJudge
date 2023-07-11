@@ -4,10 +4,10 @@ import java.util.Scanner;
 public class Main {
  
     public static void main(String[] args) throws IOException {
-        Scanner ler = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         int a, b, x;
-        a = ler.nextInt();
-        b = ler.nextInt();
+        a = scan.nextInt();
+        b = scan.nextInt();
         x = a + b;
         System.out.print("X = " + x +"\n");
  
