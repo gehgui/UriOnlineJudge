@@ -4,46 +4,21 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
-        int valor, decrementarValor, cem=0, cinquenta=0, vinte=0, dez=0, cinco=0, dois=0, um=0;
+        int valor;
         valor = sc.nextInt();
-        decrementarValor = valor;
-        do{
-            if(decrementarValor-100 >= 0){
-                decrementarValor -= 100;
-                cem++;
-            }
-            else if(decrementarValor-50 >= 0){
-                decrementarValor -= 50;
-                cinquenta++;
-            }
-            else if(decrementarValor-20 >= 0){
-                decrementarValor -= 20;
-                vinte++;
-            }
-            else if(decrementarValor-10 >= 0){
-                decrementarValor -= 10;
-                dez++;
-            }
-            else if(decrementarValor-5 >= 0){
-                decrementarValor -= 5;
-                cinco++;
-            }
-            else if(decrementarValor-2 >= 0){
-                decrementarValor -= 2;
-                dois++;
-            }
-            else if(decrementarValor-1 >= 0){
-                decrementarValor -= 1;
-                um++;
-            }
-        }while(decrementarValor != 0);
         System.out.println(valor);
-        System.out.printf("%d nota(s) de R$ 100,00%n", cem);
-        System.out.printf("%d nota(s) de R$ 50,00%n", cinquenta);
-        System.out.printf("%d nota(s) de R$ 20,00%n", vinte);
-        System.out.printf("%d nota(s) de R$ 10,00%n", dez);
-        System.out.printf("%d nota(s) de R$ 5,00%n", cinco);
-        System.out.printf("%d nota(s) de R$ 2,00%n", dois);
-        System.out.printf("%d nota(s) de R$ 1,00%n", um);
+        System.out.printf("%d nota(s) de R$ 100,00%n", valor/100);
+        valor %= 100;
+        System.out.printf("%d nota(s) de R$ 50,00%n", valor/50);
+        valor %= 50;
+        System.out.printf("%d nota(s) de R$ 20,00%n", valor/20);
+        valor %= 20;
+        System.out.printf("%d nota(s) de R$ 10,00%n", valor/10);
+        valor %= 10;
+        System.out.printf("%d nota(s) de R$ 5,00%n", valor/5);
+        valor %= 5;
+        System.out.printf("%d nota(s) de R$ 2,00%n", valor/2);
+        valor %= 2;
+        System.out.printf("%d nota(s) de R$ 1,00%n", valor);
     }   
 }
