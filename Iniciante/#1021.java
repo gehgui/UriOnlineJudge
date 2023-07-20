@@ -21,15 +21,15 @@ public class Main {
         n %= 2;
         System.out.printf("MOEDAS:%n");
         System.out.printf("%d moeda(s) de R$ 1.00%n", (int)n/1);
-        n %= 1;/*
-        System.out.printf("%f moeda(s) de R$ 0.50%n", (n));
-        n %= 0.50;
-        System.out.printf("%f moeda(s) de R$ 0.25%n", n);
-        n %= 0.25;
-        System.out.printf("%f moeda(s) de R$ 0.10%n", n);
-        n %= 0.10;
-        System.out.printf("%f moeda(s) de R$ 0.05%n", n);
-        n %= 0.05;
-        System.out.printf("%f moeda(s) de R$ 0.01%n", n);*/
+        n = (n%1)*100;
+        System.out.printf("%d moeda(s) de R$ 0.50%n", (int)n/50);
+        n %= 50;
+        System.out.printf("%d moeda(s) de R$ 0.25%n", (int)n/25);
+        n %= 25;
+        System.out.printf("%d moeda(s) de R$ 0.10%n", (int)n/10);
+        n %= 10;
+        System.out.printf("%d moeda(s) de R$ 0.05%n", (int)n/5);
+        n %= 5;
+        System.out.printf("%d moeda(s) de R$ 0.01%n", (int)n/1);
     }
 }
